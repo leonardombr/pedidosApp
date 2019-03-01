@@ -1,10 +1,10 @@
-# Meat - Angular App Starter
+# Pedidos
 
 ## 1. Passos para começar
 
 ### Clonando o Repositório
 
-`git clone https://github.com/leonardombr/meat-app-starter.git`
+`git clone https://github.com/leonardombr/pedidosApp`
 
 ### Instalando as Dependências
 
