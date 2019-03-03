@@ -32,13 +32,13 @@ export class OrderComponent implements OnInit {
 
   ngOnInit() {
     this.orderForm = this.formBuilder.group({
-      name: this.formBuilder.control('', [Validators.required, Validators.minLength(5)]),
+      nome: this.formBuilder.control('', [Validators.required, Validators.minLength(5)]),
       email: this.formBuilder.control('', [Validators.required, Validators.pattern(this.emailPattern)]),
       emailConfirmation: this.formBuilder.control('', [Validators.required, Validators.pattern(this.emailPattern)]),
-      address: this.formBuilder.control('', [Validators.required, Validators.minLength(5)]),
-      number: this.formBuilder.control('', [Validators.required, Validators.pattern(this.numberPattern)]),
-      optionalAddress: this.formBuilder.control(''),
-      paymentOption: this.formBuilder.control('', Validators.required)
+      endereco: this.formBuilder.control('', [Validators.required, Validators.minLength(5)]),
+      numero: this.formBuilder.control('', [Validators.required, Validators.pattern(this.numberPattern)]),
+      enderecoOpcional: this.formBuilder.control(''),
+      pagamentoOpcao: this.formBuilder.control('', Validators.required)
     }, {validator: OrderComponent.equalsTo})
   }
 
@@ -75,9 +75,9 @@ export class OrderComponent implements OnInit {
     this.orderService.remove(item)
   }
 
-  checkOrder(order: Order) {
-    order.orderItems = this.cartItems().map((item: CartItem) => new OrderItem(item.quantity, item.menuItem.id))
-    this.orderService.checkOrder(order).subscribe((orderId: string) => {
+  checkOrder(order: Order) {    
+    order.listItemPedido = this.cartItems().map((item: CartItem) => new OrderItem(item.quantity, item.menuItem))
+    this.orderService.checkOrder(order).subscribe(returnApi => {      
       this.router.navigate(['/order-summary'])
       this.orderService.clear()
     })

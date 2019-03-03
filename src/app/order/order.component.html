@@ -29,7 +29,7 @@
 
         <div class="col-sm-6 col-xs-12">
           <mt-input-container errorMessage="Campo obrigatório e com 5 caracteres!" label="Nome">
-            <input class="form-control" formControlName="name" placeholder="Nome"
+            <input class="form-control" formControlName="nome" placeholder="Nome"
               autocomplete="off" />
           </mt-input-container>
         </div>
@@ -57,19 +57,19 @@
         </div>
         <div class="col-sm-6 col-xs-12">
           <mt-input-container errorMessage="Campo obrigatório e com 5 caracteres!" label="Endereço">
-            <input class="form-control" formControlName="address" placeholder="Endereço"
+            <input class="form-control" formControlName="endereco" placeholder="Endereço"
               autocomplete="off" />
           </mt-input-container>
         </div>
         <div class="col-sm-3 col-xs-6">
           <mt-input-container label="Endereço" errorMessage="Obrigatório e somente números">
-            <input type="text" class="form-control" formControlName="number" placeholder="Número"
+            <input type="text" class="form-control" formControlName="numero" placeholder="Número"
                autocomplete="off">
           </mt-input-container>
         </div>
         <div class="col-sm-3 col-xs-6">
           <mt-input-container>
-            <input type="text" class="form-control" formControlName="optionalAddress" placeholder="Complemento"
+            <input type="text" class="form-control" formControlName="enderecoOpcional" placeholder="Complemento"
               autocomplete="off">
           </mt-input-container>
         </div>
@@ -95,7 +95,7 @@
 
           <div class="form-group">
 
-            <mt-radio [options]="paymentOptions" formControlName="paymentOption"></mt-radio>
+            <mt-radio [options]="paymentOptions" formControlName="pagamentoOpcao"></mt-radio>
 
           </div>
 

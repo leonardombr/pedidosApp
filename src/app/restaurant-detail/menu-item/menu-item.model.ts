@@ -1,8 +1,10 @@
+import { Restaurant } from "app/restaurants/restaurant/restaurant.model";
+
 export interface MenuItem{
-    id: string
+    id: number
     imagePath: string
-    name: string
-    description:string
-    price: number
-    restaurantId:string
+    nome: string
+    descricao:string
+    preco: number
+    restaurante: Restaurant
 }
