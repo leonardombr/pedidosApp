@@ -19,11 +19,11 @@ import 'rxjs/add/operator/switchMap';
         bottom: '0px'
       })),
       state('visible', style({
-        opacity: 0.8,
+        opacity: 1,
         bottom: '30px'
       })),
-      transition('hidden => visible', animate('500ms 0s ease-in')),
-      transition('visible => hidden', animate('500ms 0s ease-out'))
+      transition('hidden => visible', animate('600ms 0s ease-in')),
+      transition('visible => hidden', animate('600ms 3s ease-out'))
     ])
   ]
 })

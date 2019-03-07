@@ -1,7 +1,9 @@
 <div *ngIf="items.length === 0">
-  <p class="text-center">
-    Não há itens no seu carrinho. Que tal começar por <a [routerLink]="[ '/restaurantes']">aqui?</a>
-  </p>
+  <h3 class="text-center">    
+      <p>Não há itens no seu carrinho.</p>
+      
+      <p>Que tal começar por <a [routerLink]="[ '/restaurantes']">aqui?</a></p>    
+  </h3>
 </div>
 
 <div class="col-xs-12 table-responsive" *ngIf="items.length > 0">
@@ -20,12 +22,12 @@
       <tr *ngFor="let item of items">
         <td class="text-center">
           <a (click)="emitDecrementQty(item)" class="btn btn-sm"><i class="fa fa-minus"></i></a>
-          {{item.quantity}}
+          <b>{{item.quantity}}</b>
           <a (click)="emitIncreaseQty(item)" class="btn btn-sm"><i class="fa fa-plus"></i></a>
         </td>
-        <td>{{item.menuItem.name}}</td>
+        <td>{{item.menuItem.nome}}</td>
 
-        <td>{{item.menuItem.description}}</td>
+        <td>{{item.menuItem.descricao}}</td>
         <td class="text-right">{{item.value() | currency: 'BRL': true}}</td>
         <td class="text-right">
           <a (click)="emitRemove(item)" class="btn btn-sm danger"><i class="fa fa-remove"></i></a>

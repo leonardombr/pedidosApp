@@ -23,8 +23,8 @@ export class ShoppingCartService {
         } else {
             this.items.push(new CartItem(item))
         }
-        this.notificationService.notify(`Você adicionou o item ${item.nome}`)       
-    }
+        this.notificationService.notify(`Você adicionou o item ${item.nome}, Clique no carrinho para finalizar o pedido!`)       
+    } 
 
     increaseQty(item: CartItem){
         item.quantity = item.quantity + 1

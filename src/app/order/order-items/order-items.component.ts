@@ -19,6 +19,8 @@ export class OrderItemsComponent implements OnInit {
   }
 
   emitIncreaseQty(item: CartItem){
+    console.log(item);
+    
     this.increaseQty.emit(item)
   }
 

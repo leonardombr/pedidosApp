@@ -16,6 +16,15 @@
       </div>
 
       <div class="row">
+          <div class="col-xs-12">
+            <p class="lead">Itens do Pedido:</p>
+          </div>
+          <mt-order-items [items]="cartItems()" (increaseQty)="increaseQty($event)" (decreseQty)="decreseQty($event)"
+            (remove)="remove($event)"></mt-order-items>
+          <!-- /.col -->
+        </div>
+
+      <div class="row">
 
         <div class="col-xs-12 col-sm-9">
           <p class="lead">Seus dados!</p>
@@ -75,18 +84,6 @@
         </div>
         <!-- /.col -->
       </div>
-      <!-- /.row -->
-
-      <!-- Table row -->
-      <div class="row">
-        <div class="col-xs-12">
-          <p class="lead">Itens do Pedido:</p>
-        </div>
-        <mt-order-items [items]="cartItems()" (increaseQty)="increaseQty($event)" (decreseQty)="decreseQty($event)"
-          (remove)="remove($event)"></mt-order-items>
-        <!-- /.col -->
-      </div>
-      <!-- /.row -->
 
       <div class="row">
         <!-- accepted payments column -->
