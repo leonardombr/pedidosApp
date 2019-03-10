@@ -32,4 +32,8 @@ export class OrderItemsComponent implements OnInit {
     this.remove.emit(item)
   }
 
+  total(item){
+    return item.menuItem.preco * item.quantity
+  }
+
 }
