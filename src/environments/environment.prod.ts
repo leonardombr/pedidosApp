@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  api: 'https://localhost:8080'
+  api: 'https://192.168.0.107:8080/pedidos'
 };

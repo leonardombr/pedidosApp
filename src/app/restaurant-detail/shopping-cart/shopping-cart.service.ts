@@ -16,6 +16,7 @@ export class ShoppingCartService {
 
     clear() {
         this.items = []
+        this.setSession(this.items)
     }
 
     addItem(item: MenuItem){
