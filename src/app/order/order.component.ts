@@ -36,7 +36,6 @@ export class OrderComponent implements OnInit {
       email: this.formBuilder.control('', [Validators.required, Validators.pattern(this.emailPattern)]),
       emailConfirmation: this.formBuilder.control('', [Validators.required, Validators.pattern(this.emailPattern)]),
       endereco: this.formBuilder.control('', [Validators.required, Validators.minLength(5)]),
-      numero: this.formBuilder.control('', [Validators.required, Validators.pattern(this.numberPattern)]),
       enderecoOpcional: this.formBuilder.control(''),
       pagamentoOpcao: this.formBuilder.control('', Validators.required)
     }, {validator: OrderComponent.equalsTo})

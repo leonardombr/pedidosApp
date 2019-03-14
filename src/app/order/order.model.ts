@@ -3,7 +3,6 @@ import { MenuItem } from "app/restaurant-detail/menu-item/menu-item.model";
 class Order {
     constructor(
         public endereco: string,
-        public numero: number,
         public enderecoOpcional: string,
         public pagamentoOpcao: string,
         public listItemPedido: OrderItem[] = [],
